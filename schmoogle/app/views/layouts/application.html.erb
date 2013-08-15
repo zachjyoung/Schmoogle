@@ -2,12 +2,19 @@
 <html>
 <head>
   <title>Schmoogle</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  <!-- Loads external CSS stylesheet files -->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+
+  <!-- Loads external Javascript files -->
+  <%= javascript_include_tag "application" %>
+
+  <!-- Helps protect against security vulnerabilities -->
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<!-- This is where the page specific content will be inserted -->
 <%= yield %>
 
 </body>
