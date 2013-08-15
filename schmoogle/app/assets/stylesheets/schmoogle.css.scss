@@ -47,3 +47,34 @@ body {
 .search-form {
   margin: 0;
 }
+
+/* Filters Navigation */
+.filters-container {
+  border-bottom: 1px solid #bebebe;
+  background: #fff;
+}
+
+.filter-nav {
+  padding: 0;
+  margin-left: 128px;
+  list-style: none;
+}
+
+.filter-nav> li {
+  display: inline-block;
+}
+
+.filter-nav > li > a {
+  display: block;
+  margin-right: 8px;
+  padding-right: 8px;
+  color: #777;
+  text-decoration: none;
+}
+
+.filter-nav > li > a.active, {
+  color: #dd4b39;
+}
+.filter-nav > li > a:hover {
+  color: #000;
+}
