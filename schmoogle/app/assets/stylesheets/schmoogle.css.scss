@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Body Style */
 
 body {
   margin: 0;
@@ -35,4 +35,15 @@ body {
   color: #ffffff;
 }
 
-/* DON'T FORGET THE MAIN CONTENT */
+/* Search Box */
+
+.search-container {
+  padding: 20px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #f4f4f4;
+}
+
+
+.search-form {
+  margin: 0;
+}
