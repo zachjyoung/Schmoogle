@@ -78,3 +78,37 @@ body {
 .filter-nav > li > a:hover {
   color: #000;
 }
+
+/* Content and links */
+
+h3 {
+  padding-top: 18px;
+  margin: 0;
+  color: #2518b5;
+}
+
+.main-container {
+  background: #fff;
+  padding: 0;
+  margin-left: 128px;
+  list-style: none;
+  width: 499px;
+}
+.content-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.content-nav > li > a {
+  display: block;
+  padding: 0;
+  color: #00802a;
+  text-decoration: none;
+}
+
+.content-nav > li > .active,
+.content-nav > li > a:hover {
+  color: #00802a;
+}
