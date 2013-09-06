@@ -8,10 +8,8 @@ end
 
 average = total_test_scores/all_test_scores.size
 
-
 lowest = test_scores.min
-highest = test_scores.max
-
+highest = test_scores.maxzx
 
 puts lowest
 puts highest
