@@ -1,0 +1,154 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  font-family: Verdana;
+}
+
+.wrapper {
+  margin: 10px 200px;
+  background-color: #F6F5F0;
+}
+
+
+nav {
+  padding: 4px 4px 4px 1px;
+  background-color: #FF6500;
+  font-size: 10px;
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;   
+  }
+ 
+
+  .icon {
+    color: white;
+    padding: 2px;
+    border: 1px solid white;
+  }
+  .slacker {
+    font-weight: bold;
+  }
+  :last-child {
+    float: right;
+    }
+
+}
+
+
+
+#main-content {
+  color: #828282;
+  padding-bottom: 20px;
+
+  .article-container {
+    padding-left: 30px;
+  }
+
+  .article {
+    color: black; 
+    font-size: 13px;
+    margin-left: -3px;
+    
+
+  }
+  a {
+    font-size: 10px;
+    color: #828282;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #828282;
+  }
+
+  .upvote {
+    font-size: 9px;
+    margin-left: -8px; 
+  }
+  li {
+    font-size: 13px;
+  }
+  .user-comments {
+    font-size: 10px;
+    padding-left: 2px;
+    a:hover {
+      text-decoration: underline;
+    } 
+
+  }
+  .website {
+    font-size: 11px;
+  }
+  a.more {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding-left: 30px;
+  }
+  a.reply {
+  text-decoration: underline;
+  font-size: 10px;
+  color: black;
+  }
+
+}
+
+.comments-container {
+  margin-top: 10px;
+  padding-left: 15px;
+  font-size: 12px;
+}
+
+.comments-level1 {
+  margin: 10px 0px 0px 0px;
+}
+
+.comments-level2 {
+  margin: 10px 0px 0px 35px;
+}
+
+.comments-level3 {
+  margin: 10px 0px 0px 70px;
+}
+
+textarea#styled {
+  margin-top: 20px;
+  width: 501px;
+  height: 96px;
+  padding: 5px;
+  display: block;
+}
+
+button {
+  margin: 20px 0px 40px 0px;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 15px 0px;
+  border-top: 2px solid #FF6500;
+  color: #828282;
+  font-size: 10px;
+  a {
+    color: black;
+    text-decoration: none;
+    font-size: 11px;
+  }
+  form {
+    padding: 20px 0px;
+    font-size: 13px;
+    color: #828282;
+  }
+}
+
+
+
+
+
+
+

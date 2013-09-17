@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LauncherNews</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <%= link_to 'Launcher News', root_path, class: 'brand' %>
+
+      <%= form_tag(search_articles_path, method: :get, class: 'navbar-form pull-right') do %>
+      <%= text_field_tag 'query', nil, class: 'span4 search-query' %>
+      <%= submit_tag 'Search', class: 'btn' %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= yield %>
+</div>
+
+</body>
+</html>

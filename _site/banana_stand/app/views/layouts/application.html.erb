@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BananaStand</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<style>
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    color: pink;
+    border: 1px solid red;
+  }
+
+  p {
+    border: 1px solid black ;
+  }
+
+  aside {
+    float: left;
+    width: 20%;
+  }
+
+  #main {
+    border: 1px solid red;
+    float: left;
+  } 
+
+  a.hot-link {
+    border: 1px solid green;
+  }
+
+</style>
+
+<body>
+
+<ul class="nav">
+  <li><a href="#">Sign in</a></li>
+</ul>
+
+<aside class="news-sidebar">
+  <p>There is awesome stuff happening here</p>
+
+  <a class="hot-link" href="#">Got to awesomez</a>
+
+</aside>
+<section id="main">
+  Some Noise
+</section>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+require 'anagrams_spec'
+

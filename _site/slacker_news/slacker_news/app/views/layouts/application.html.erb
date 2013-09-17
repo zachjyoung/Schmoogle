@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SlackerNews</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="wrapper">
+
+<nav>
+  <a class="icon" href="#" >S</a>
+  <a class="slacker" href="/index">Slacker News</a>
+  <a href="#">new</a> |
+  <a href="#">comments</a> |
+  <a href="#">ask</a> |
+  <a href="#">jobs</a> |
+  <a href="#">submit</a>
+  <a href="#">login</a>
+</nav>
+
+<div id="main-content">
+  <%= yield %>
+</div>
+
+<footer>
+  <a href="#">Lists</a> |
+  <a href="#">RSS</a> |
+  <a href="#">Bookmarklet</a> |
+  <a href="#">Guidelines</a> |
+  <a href="#">FAQ</a> |
+  <a href="#">DMCA</a> |
+  <a href="#">News News</a> |
+  <a href="#">Feature Requests</a> |
+  <a href="#">Bugs</a> |
+  <a href="#">Y Combinator</a> |
+  <a href="#">Apply</a> |
+  <a href="#">Library</a>
+  <form>
+    Search: <input type="search">
+  </form>
+</footer>
+
+</div>
+</body>
+</html>

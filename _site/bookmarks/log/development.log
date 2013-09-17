@@ -1,0 +1,156 @@
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20130819141321)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "notes" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130819141321"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-19 10:13:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/zachyoung/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 38ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2013-08-19 10:14:07 -0400
+Processing by BookmarksController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks"
+  Rendered bookmarks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 898ms (Views: 892.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bookmarks.css?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/assets/bookmarks.js?body=1" for 127.0.0.1 at 2013-08-19 10:14:08 -0400
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at 2013-08-19 10:14:51 -0400
+Processing by BookmarksController#new as HTML
+  Rendered bookmarks/_form.html.erb (47.8ms)
+  Rendered bookmarks/new.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FEXqA9Z03a6lsjK7NI5/gbJlPYEqVLTvY52XmxYkRA=", "bookmark"=>{"name"=>"Bookmark Face", "url"=>"www.bookmark.com", "notes"=>"this bookmark is CRA!"}, "commit"=>"Create Bookmark"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "bookmarks" ("created_at", "name", "notes", "updated_at", "url") VALUES (?, ?, ?, ?, ?)  [["created_at", Mon, 19 Aug 2013 14:15:22 UTC +00:00], ["name", "Bookmark Face"], ["notes", "this bookmark is CRA!"], ["updated_at", Mon, 19 Aug 2013 14:15:22 UTC +00:00], ["url", "www.bookmark.com"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/bookmarks/1
+Completed 302 Found in 12ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered bookmarks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bookmarks.css?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/bookmarks.js?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-19 10:15:22 -0400
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2013-08-19 10:15:25 -0400
+Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks"[0m
+  Rendered bookmarks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at 2013-08-19 10:21:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BookmarksController#new as HTML
+  Rendered bookmarks/_form.html.erb (30.4ms)
+  Rendered bookmarks/new.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 136ms (Views: 88.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/bookmarks.css?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/bookmarks.js?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-19 10:21:34 -0400
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2013-08-19 10:24:14 -0400
+Processing by BookmarksController#index as HTML
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks"
+  Rendered bookmarks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at 2013-08-19 10:24:19 -0400
+Processing by BookmarksController#new as HTML
+  Rendered bookmarks/_form.html.erb (29.2ms)
+  Rendered bookmarks/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2013-08-19 10:24:21 -0400
+Processing by BookmarksController#index as HTML
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks"[0m
+  Rendered bookmarks/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
